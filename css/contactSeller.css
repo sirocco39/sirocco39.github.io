@@ -1,0 +1,828 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+}
+
+#sidebar {
+    position: fixed;
+    top: 70px;
+    height: calc(100% - 70px);
+    width: 15%;
+    z-index: 999;
+    transition: transform 0.1s ease;
+    transform: translateX(-100%);
+}
+
+#sidebar.active {
+    transform: translateX(0);
+}
+
+.side h1 {
+    color: var(--clr-blue);
+}
+
+:root {
+    --clr-blue: #003f7d;
+    --clr-org: #ff8e00;
+    --clr-horg: rgba(255, 171, 102, 0.434);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 200%;
+    background-color: white;
+}
+
+a {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    text-decoration: none;
+    color: inherit;
+}
+
+header nav.top ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    height: 70px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+header nav.top ul li {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    height: 100%;
+}
+
+.logoimg {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.toggle {
+    cursor: pointer;
+}
+
+header nav.top .logo {
+    display: flex;
+    color: var(--clr-org);
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 32px;
+    align-items: center;
+}
+
+header nav.top .logo a {
+    color: var(--clr-blue);
+}
+
+.searchbar {
+    width: 50%;
+}
+
+.searchbar input[type="text"] {
+    width: 100%;
+    height: 60%;
+    border-radius: 8px;
+    /* border-color: rgba(0, 0, 0, 0.3); */
+    border-width: 0px;
+    padding-left: 10px;
+    background-color: #ececec;
+}
+
+header nav.top .user i {
+    margin-right: 10px;
+}
+
+.cartbell {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.side {
+    background-color: white;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    justify-content: flex-start;
+    padding: 10px
+}
+
+nav.side ul {
+    list-style: none;
+    font-size: 14px;
+    font-weight: 700;
+    padding-top: 10px;
+}
+
+.all-prod {
+    background-color: #ececec;
+}
+
+.electronics,
+.homeapp,
+.automotives,
+.sport,
+.all-prod {
+    display: flex;
+    flex-direction: column;
+}
+
+.electronics a,
+.all-prod a,
+.homeapp a,
+.automotives a,
+.sport a {
+    display: flex;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+
+.side li {
+    padding: 15px 5px 15px 5px;
+    /* border: 1px solid black; */
+    border-radius: 7px;
+}
+
+.logo-container {
+    width: 22px;
+    height: 100%;
+    ;
+    /* border: 1px solid black; */
+    margin-right: 10px;
+    display: flex;
+}
+
+nav.side ul h1 {
+    font-size: 28px;
+    font-weight: 1000;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#elec,
+#homeMenu,
+#autoMenu,
+#sportMenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+#elec.active,
+#homeMenu.active,
+#autoMenu.active,
+#sportMenu.active {
+    max-height: 100%;
+}
+
+footer {
+    margin-top: auto;
+    width: 100%;
+    height: 365px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-container {
+    margin-top: 30px;
+    margin-bottom: 60px;
+    width: 80%;
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+}
+
+.footer-container h4 {
+    margin-bottom: 10px;
+}
+
+.footer-container li {
+    margin: 10px 0 10px;
+    list-style-type: none;
+    font-size: 13px;
+}
+
+.follow-newsletter {
+    /* border: 1px solid black; */
+    height: 100%;
+    width: 406px;
+    display: flex;
+    flex-direction: column;
+}
+
+.follow-us {
+    /* border: 1px solid black; */
+    margin-top: 20px;
+    width: 200px;
+    height: 70px;
+}
+
+.newsletter {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-us {
+    height: 100%;
+    /* border: 1px solid black; */
+}
+
+.social {
+    margin-top: 25px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 6%;
+}
+
+.newsletter p {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.newsletter input {
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 50px;
+    margin: 10px 0 10px 0
+}
+
+.newsletter input[type="text"] {
+    padding-left: 15px
+}
+
+.newsletter input[type="button"] {
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.side h1 a {
+    color: var(--clr-org);
+}
+
+main {
+    align-self: center;
+    width: 80%;
+    height: 630px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    margin-top: 105px;
+    margin-bottom: 105px;
+    display: flex;
+    border-radius: 8px;
+}
+
+.chat-list{
+    height: 100%;
+    width: 25%;
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+
+.chat-list .head{
+    display: flex;
+    flex-direction: column;
+    height: 145px;
+    width: 100%;
+    padding: 0 5px 0 5px;
+}
+
+.head .chat-setting{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 17px 0 17px;
+    width: 100%;
+    height: 50%;
+    /* border: 1px solid black; */
+}
+
+.head form{
+    display: flex;
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 50%;
+    padding: 8px;
+}
+
+.head input{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: 0px solid rgba(0, 0, 0, 0.3);
+    padding-left: 15px;
+    font-size: 14px;
+    background-color: #ececec;
+}
+
+.user-list{
+    height: calc((100%) - 145px);
+    width: 100%;
+    /* border: 1px solid black; */
+    /* background-color: beige; */
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    padding: 5px;
+}
+
+.user-list .user{
+    width: 100%;
+    height: 75px;
+    /* border: 1px solid black; */
+    border-radius: 8px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 5px;
+    padding: 5px;
+    align-self: center;
+}
+
+.user .img{
+    /* border: 1px solid black; */
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background-color: #ececec;
+}
+
+#bobimg{
+    background-image: url(/Assets/Bob_Semple\,_1935.jpg);
+    background-size: 100%;
+}
+
+.user .text{
+    /* border: 1px solid black; */
+    height: 90%;
+    width: 55%;
+    display: flex;
+    flex-direction: column ;
+    justify-content: space-evenly;
+}
+
+.user .text h6{
+    font-weight: 100;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.user .time h6, .status .text h6{
+    font-weight: 100;
+    color: var(--clr-blue);
+}
+
+.user .time{
+    /* border: 1px solid black; */
+    height: 100%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bob{
+    background-color: var(--clr-horg);
+}
+
+.chat-window{
+    height: 100%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-window .status{
+    width: 100%;
+    height: 90px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    padding: 15px 30px 15px 30px;
+    flex-shrink: 0;
+}
+
+.status .img{
+    background-color: #ececec;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    margin-right: 20px;
+}
+
+.status .text{
+    height: 50px;
+    width: 60%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.status i{
+    margin-left: auto;
+}
+
+.chat-window .chat{
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 30px 0px 30px;
+    overflow-y: scroll;
+}
+
+.chat .time{
+    width: 75px;
+    height: 25px;
+    border: 0px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #ececec;
+    margin-bottom: 20px;
+}
+
+.chat .message{
+    /* border: 1px solid black; */
+    width: 100%;
+    height: calc(100% - 25px);
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.bubble-send{
+    align-self: flex-end;
+    min-width: none;
+    max-width: 350px;
+    min-height: none;
+    max-height: none;
+    padding: 10px 15px 10px 15px;
+    /* border: 1px solid black; */
+    border-radius: 32px 0 32px 32px;
+    background-color: var(--clr-blue);
+    display: flex;
+    color: white;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+#img{
+    min-height: 175px;
+    padding: 10px;
+}
+
+.bubble-receive{
+    align-self: flex-start;
+    min-width: none;
+    max-width: 350px;
+    min-height: none;
+    max-height: none;
+    padding: 10px 15px 10px 15px;
+    /* border: 1px solid black; */
+    border-radius: 0px 32px 32px 32px;
+    background-color: #ececec;
+    display: flex;
+    color: black;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+#trade-bubble{
+    background-color: #ff8e00;
+    color: white;
+    cursor: pointer;
+}
+
+
+.message .img{
+    width: 175px;
+    height: 100%;
+    border-radius: 32px;
+    background-color: #ececec;
+    background-size: 100%;
+    background-image: url(/Assets/tank.jpg);
+}
+
+.chat-window .type{
+    padding: 15px 30px 15px 30px;
+    width: 100%;
+    height: calc(25% - 90px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+
+.type .icon{
+    display: flex;
+    width: 100px;
+    height: 100%;
+    /* border: 1px solid black; */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.type form{
+    height: 100%;
+    /* border: 1px solid black; */
+    width: 86%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.type input{
+    padding-left: 10px;
+    height: 100%;
+    width: 95%;
+    border-radius: 8px;
+    border: 0px;
+    background-color: #ececec;
+}
+
+.trade-screen{
+    width: 100%;
+    height: 125px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 10px 30px 10px 30px;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 10px;
+    display: none;
+    /* display: flex;    */
+}
+
+.give-trade, .receive-trade{
+    height: 100%;
+    width: 300px;
+    /* border: 1px solid black; */
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.option{
+    height: 80%;
+    width: calc(100% - 700px);
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.option .accept, .option .cancel{
+    height: 45%;
+    width: 100%;
+    /* border: 1px solid black; */
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.option .accept{
+    background-color: var(--clr-org);
+    color: white;
+}
+
+.option .cancel{
+    border: 1px solid var(--clr-org);
+    color: var(--clr-org);
+}
+
+.trade-container{
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.trade-container .item{
+    height: 70px;
+    width: 70px;
+    border: 1px solid var(--clr-blue);
+    border-radius: 8px;
+    background-color:#003e7d46;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0 6px 3px 0;
+}
+
+.currency{
+    color: var(--clr-blue);
+}
+
+#receive1{
+    background-size: 110%;
+    background-image: url(/Assets/tank.jpg);
+    background-position: top;
+}
+
+.trade-confirm{
+    z-index: 1000;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 900px;
+    height: 600px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    align-self: center;
+    top: 15%;
+    border-radius: 16px;
+    background-color: white;
+    padding: 20px;
+    display: none;
+}
+
+.trade-confirm .container{
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 20px;
+}
+
+.trade-confirm .head{
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 10%;
+    display: flex;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+
+.trade-confirm .get, .trade-confirm .give{
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    font-size: 16px;
+}
+
+.get-text{
+    color: green;
+}
+
+.give-text{
+    color: red;
+}
+
+.trade-confirm h4{
+    font-size: 16px;
+    /* border: 1px solid black; */
+}
+
+.trade-confirm .trade-item{
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.trade-item .img{
+    height: 100%;
+    background-color: #ececec;
+    width: 63.35px;
+    border-radius: 8px;
+}
+
+.top .logo{
+    cursor: pointer;
+}
+
+#trade-tank{
+    background-image: url(/Assets/tank.jpg);
+    background-size: 100%;
+}
+
+
+#money-img{
+    background-image: url(/Assets/moneyy.png);
+    background-size: 100%;
+}
+
+.trade-confirm .warning{
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.warning h1{
+    color: red;
+}
+
+.trade-confirm a{
+    color: var(--clr-blue);
+}
+
+.trade-confirm .option{
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.trade-confirm .cancel, .trade-confirm .accept{
+    border: 1px solid black;
+    height: 100%;
+    width: 20%;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;    
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.trade-confirm .cancel{
+    border: 2px solid var(--clr-org);
+}
+
+.trade-confirm .accept{
+    border: 0px;
+}
+
+#thanks{
+    display: none;
+}
+
+#chat1{
+    display: none;
+}
+
+#trade-bubble{
+    display: none;
+}

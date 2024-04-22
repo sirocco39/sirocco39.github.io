@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arngren</title>
+    <link rel="stylesheet" href="/css/contactSeller.css">
+    <script src="https://kit.fontawesome.com/c4ed0610fe.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="top">
+            <ul>
+                <li class="toggle" id="trigger"><i class="fa-solid fa-bars"></i></li>
+                <li class="logo" id="home"><img src="/Assets/arngren2.png" class="logoimg">ARN<a>GREN</a></li>
+                <li class="searchbar"><input type="text" placeholder="Search for products..."></li>
+                <div class="cartbell">
+                    <li class="cart"><a href="#"><i class="fa-solid fa-heart"></i></a></li>
+                    <li class="bell"><a href="#"><i class="fa-solid fa-bell"></i></i></a></li>
+                    <li class="bell"><a href="#"><i class="fa-solid fa-message"></i></i></a></li>
+                </div>
+                <li class="user"><a href="#"><i class="fa-solid fa-user"></i>Arnuser</a></li>
+            </ul>
+        </nav>
+        <nav class="side" id="sidebar">
+            <ul>
+                <h1><a>CATE</a>GORIES</h1>
+                <li class="all-prod"><a href="#">
+                        <div class="logo-container"><i class="fa-solid fa-globe fa-xl"></i></div>
+                        <p>All Products</p>
+                    </a></li>
+                <li class="electronics" id="elecs"><a href="#">
+                        <div class="logo-container"><i class="fa-solid fa-mobile fa-2xl"></i></div>
+                        <p>Electronics</p>
+                    </a>
+                    <ul id="elec">
+                        <li><a href="#">Smartphones</a></li>
+                        <li><a href="#">Tablets</a></li>
+                        <li><a href="#">Laptops</a></li>
+                    </ul>
+                </li>
+                <li class="homeapp" id="homeTrig"><a href="#">
+                        <div class="logo-container"><i class="fa-solid fa-home fa-xl"></i></div>
+                        <p>Home Appliances</p>
+                    </a>
+                    <ul id="homeMenu">
+                        <li><a href="#">Refrigerators</a></li>
+                        <li><a href="#">Washing Machines</a></li>
+                        <li><a href="#">Microwaves</a></li>
+                    </ul>
+                </li>
+                <li class="automotives" id="autoTrig"><a href="#">
+                        <div class="logo-container"><i class="fa-solid fa-car fa-xl"></i></div>
+                        <p>Automotives</p>
+                    </a>
+                    <ul id="autoMenu">
+                        <li><a href="#">Cars</a></li>
+                        <li><a href="#">Motorcycles</a></li>
+                        <li><a href="#">Bicycles</a></li>
+                    </ul>
+                </li>
+                <li class="sport" id="sportTrig"><a href="#">
+                        <div class="logo-container"><i class="fa-solid fa-dumbbell fa-xl"></i></div>
+                        <p>Sport</p>
+                    </a>
+                    <ul id="sportMenu">
+                        <li><a href="#">Exercise Equipments</a></li>
+                        <li><a href="#">Sports Gears</a></li>
+                        <li><a href="#">Camping and Hiking</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="chat-list">
+            <div class="head">
+                <div class="chat-setting">
+                    <h1>Chat</h1>
+                    <i class="fa-solid fa-gear fa-2xl"></i>
+                </div>
+                <form>
+                    <input type="text" placeholder="Find user...">
+                </form>
+            </div>
+            <div class="user-list">
+                <div class="user" id="bob">
+                    <div class="img" id="bobimg">
+
+                    </div>
+                    <div class="text">
+                        <h4>Bob S. Emple</h4>
+                        <h6>Hello! I'm interested...</h6>
+                    </div>
+                    <div class="time">
+                        <h6>Just now</h6>
+                    </div>
+                </div>
+                <div class="user">
+                    <div class="img">
+
+                    </div>
+                    <div class="text">
+                        <h4>Jokovvi</h4>
+                        <h6>Mau sepeda nggak?</h6>
+                    </div>
+                    <div class="time">
+                        <h6>19.25</h6>
+                    </div>
+                </div>
+                <div class="user">
+                    <div class="img">
+
+                    </div>
+                    <div class="text">
+                        <h4>Prabroro</h4>
+                        <h6>Ayo joget bareng</h6>
+                    </div>
+                    <div class="time">
+                        <h6>14.10</h6>
+                    </div>
+                </div>
+                <div class="user">
+                    <div class="img">
+
+                    </div>
+                    <div class="text">
+                        <h4>Genjer</h4>
+                        <h6>Wong saya suka kok</h6>
+                    </div>
+                    <div class="time">
+                        <h6>2d ago</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chat-window">
+            <div class="status">
+                <div class="img" id="bobimg">
+
+                </div>
+                <div class="text">
+                    <h4>Bob S. Emple</h4>
+                    <h6>Online</h6>
+                </div>
+                <i class="fa-solid fa-ellipsis-vertical fa-xl"></i>
+            </div>
+            <div class="chat">
+                <div class="time">
+                    <h6>Today</h6>
+                </div>
+                <div class="message">
+                    <div class="bubble-send" id="img">
+                        <div class="img">
+
+                        </div>
+                    </div>
+                    <div class="bubble-send">
+                        Hello! I'm interested in this item. Let's trade!
+                    </div>
+                    <div class="bubble-receive" id="chat1">
+                        Sure thing! Here you go.
+                    </div>
+                    <div class="bubble-receive" id="trade-bubble">
+                        <h4>BOB SENT YOU A TRADE REQUEST</h4>
+                    </div>
+                    <div class="bubble-receive" id="thanks">
+                        Thanks, have fun with your new Bob Semple Tank!
+                    </div>
+                </div>
+            </div>
+            <div class="trade-screen" id="trade-screen">
+                <div class="receive-trade">
+                    Bob's offer<br>
+                    <div class="trade-container">
+                        <div class="item" id="receive1">
+                            1
+                        </div>
+                        <div class="item">
+
+                        </div>
+                        <div class="item">
+
+                        </div>
+                        <div class="item">
+
+                        </div>
+                    </div>
+                    <div class="currency">
+
+                    </div>
+                </div>
+                <div class="option">
+                    <div class="accept" id="accept">
+                        ACCEPT
+                    </div>
+                    <div class="cancel" id="cancel">
+                        CANCEL
+                    </div>
+                </div>
+                <div class="give-trade">
+                    Your offer<br>
+                    <div class="trade-container">
+                        <div class="item" id="give1">
+                        </div>
+                        <div class="item">
+
+                        </div>
+                        <div class="item">
+
+                        </div>
+                        <div class="item">
+
+                        </div>
+                    </div>
+                        <h4 class="currency">Rp999.999</h4>
+                </div>
+            </div>
+            <div class="type">
+                <div class="icon">
+                    <i class="fa-solid fa-image fa-xl"></i>
+                    <i class="fa-solid fa-paperclip fa-xl"></i>
+                    <i class="fa-solid fa-face-smile fa-xl"></i>
+                </div>
+                <form>
+                    <input type="text" placeholder="Type something...">
+                    <i class="fa-solid fa-paper-plane fa-xl"></i>
+                </form>
+            </div>
+        </div>
+    </main>
+    <div class="trade-confirm" id="trade-confirm">
+        <div class="container">
+            <div class="head">
+                <h1>TRADE CONFIRMATION</h1>
+            </div>
+            <div class="get">
+                <h4 class="get-text">You'll get:</h4>
+                <div class="trade-item">
+                    <div class="img" id="trade-tank">
+
+                    </div>
+                    <h3>(<a>1</a>) BOB SEMPLE TANK</h3>
+                </div>
+            </div>
+            <div class="give">
+                <h4 class="give-text">You'll give:</h4>
+                <div class="trade-item">
+                    <div class="img" id="money-img">
+
+                    </div>
+                    <h3>(<a>Rp999.999</a>) ARNPAY</h3>
+                </div>
+   
+            </div>
+            <div class="warning">
+                <h1>WARNING!</h1>
+                <h4>Make sure the trade you're making is exactly what you want. 
+                <h4>If you're not sure, you can cancel the trade.</h4>
+            </div>
+            <div class="option">
+                <div class="cancel" id="option-cancel">
+                    CANCEL
+                </div>
+                <div class="accept" id="option-accept">
+                    ACCEPT
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="buy-product">
+                <ul>
+                    <h4>Buy Products</h4>
+                    <li>Discover quality items</li>
+                    <li>Shop our diverse range</li>
+                    <li>Find your perfect product</li>
+                    <li>Browse top-rated goods</li>
+                </ul>
+            </div>
+            <div class="sell-product">
+                <ul>
+                    <h4>Sell Products</h4>
+                    <li>Showcase globally</li>
+                    <li>Expand your market</li>
+                    <li>Reach new buyers</li>
+                    <li>Start selling today</li>
+                </ul>
+            </div>
+            <div class="support">
+                <ul>
+                    <h4>Support</h4>
+                    <li>Get prompt assistance</li>
+                    <li>Personalized support</li>
+                    <li>Contact us anytime</li>
+                    <li>Technical help</li>
+                    <li>Trust our support</li>
+                </ul>
+            </div>
+            <div class="about-us">
+                <ul>
+                    <h4>About Us</h4>
+                    <li>Discover our story</li>
+                    <li>Meet our team</li>
+                    <li>Explore our values</li>
+                </ul>
+                <div class="follow-us">
+                    <h4>Follow Us</h4>
+                    <div class="social">
+                        <i class="fa-brands fa-facebook fa-2xl"></i>
+                        <i class="fa-brands fa-instagram fa-2xl"></i>
+                        <i class="fa-brands fa-x-twitter fa-2xl"></i>
+                        <i class="fa-brands fa-youtube fa-2xl"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="follow-newsletter">
+                <div class="newsletter">
+                    <h4>Subscribe to Our Newsletter</h4>
+                    <p>Get 5% off your next order and exclusive early access to new arrivals</p>
+                    <form action="/submit">
+                        <input type="text" placeholder="Your e-mail" id="email"><br>
+                        <input type="button" value="Subscribe">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/contactSeller.js"></script>
+</body>
+
+</html>
