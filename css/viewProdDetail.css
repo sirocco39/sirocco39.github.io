@@ -549,5 +549,7 @@ main {
     width: 100%;
     height: 225px;
     border-radius: 8px;
-    background-color: #ececec;
+    background-image: url(/Assets//bobSmall1.jpeg);
+    background-position: center;
+    background-size: 101%;
 }
