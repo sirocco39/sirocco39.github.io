@@ -373,6 +373,7 @@ main {
     column-gap: 5px;
     padding: 5px;
     align-self: center;
+    cursor: pointer;
 }
 
 .user .img{
@@ -386,6 +387,22 @@ main {
 #bobimg{
     background-image: url(/Assets/Bob_Semple\,_1935.jpg);
     background-size: 100%;
+}
+
+#jokovvi, #genjer, #prabroro{
+    background-size: 100%;
+}
+
+#jokovvi{
+    background-image: url(/Assets/jokovvi.jpg);
+}
+
+#prabroro{
+    background-image: url(/Assets/prabroro.jpeg);
+}
+
+#genjer{
+    background-image: url(/Assets/genjer.jpeg);
 }
 
 .user .text{
@@ -416,8 +433,12 @@ main {
     align-items: center;
 }
 
+.user:hover{
+    background-color: #ececec;
+}
+
 #bob{
-    background-color: var(--clr-horg);
+    background-color: #ececec;
 }
 
 .chat-window{
