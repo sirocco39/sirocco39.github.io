@@ -7,7 +7,9 @@ let o=0
 
 function dropdown(trigger, menu){
     let open = false;
-    trigger.onclick = () =>{
+    trigger.onclick = (event) =>{
+        event.preventDefault();
+        event.stopPropagation();
         if(open == false){
             menu.style.display = 'block';
             open = true;
@@ -17,8 +19,8 @@ function dropdown(trigger, menu){
             open = false;
         }
     }
-    
 }
+
 
 let elecTrigger = document.querySelector('#elecs');
 let elecMenu = document.querySelector('#elec');
