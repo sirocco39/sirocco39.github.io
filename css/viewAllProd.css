@@ -68,6 +68,10 @@ header nav.top ul {
   background-color: white;
 }
 
+.item-info:hover{
+  color: var(--clr-org)
+}
+
 header nav.top ul li {
   display: flex;
   align-items: center;
@@ -83,6 +87,7 @@ header nav.top ul li {
 .toggle{
   cursor: pointer;
 }
+
 header nav.top .logo {
   display: flex;
   color: var(--clr-org);
@@ -134,6 +139,11 @@ nav.side ul {
   font-size: 14px;
   font-weight: 700;
   padding-top: 10px;
+  overflow: scroll;
+}
+
+nav.side ul::-webkit-scrollbar {
+  display: none;
 }
 
 .all-prod{
@@ -151,12 +161,16 @@ nav.side ul {
   /* border: 1px solid black; */
 }
 
+.electronics:hover,  .homeapp:hover, .automotives:hover, .sport:hover{
+  background-color: #ececec;
+}
 
 
 .side li{
   padding: 15px 5px 15px 5px;
   /* border: 1px solid black; */
   border-radius: 7px;
+  margin-bottom: 5px;
 }
 
 .logo-container{
@@ -175,13 +189,14 @@ nav.side ul h1 {
 }
 
 #elec, #homeMenu, #autoMenu, #sportMenu {
-  max-height: 0;
-  overflow: hidden;
+  display: none;
   transition: all 0.5s ease-in-out;
+  font-weight: 300;
+  padding-left: 25px;
 }
 
-#elec.active, #homeMenu.active, #autoMenu.active, #sportMenu.active    {
-  max-height: 100%;
+#elec li:hover, #homeMenu li:hover, #autoMenu li:hover, #sportMenu li:hover{
+  color: var(--clr-org);
 }
 
 
