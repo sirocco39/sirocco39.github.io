@@ -1,0 +1,759 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+:root {
+    --clr-blue1: #4A82A5;
+    --clr-blue2: #54b4ec;
+    --clr-gray: #5a5a5a;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(-5vw);
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(5vw);
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(5vw);
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+
+@keyframes breath {
+    from {
+        transform: scale(1.2);
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0%;
+    }
+
+    1% {
+        transform: translateX(0);
+    }
+
+    to {
+        opacity: 100%;
+    }
+
+}
+
+
+html {
+    min-height: 100vh;
+    font-family: 'EB Garamond', sans-serif;
+    font-size: 1vw;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    row-gap: 50px;
+    height: 100%;
+    align-items: center;
+    background-image: linear-gradient(rgba(206, 242, 253, 0.756), rgba(255, 255, 255, 0.90)), url(/Assets/114034399_p0_master1200.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+a {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+header {
+    background-color: transparent;
+    position: fixed;
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 10.5vw;
+    padding: 2% 3% 2% 1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    cursor: pointer;
+    background-image: url(/Assets/—Pngtree—blue\ ice\ anime\ light\ effect_6738214.png);
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    height: 100%;
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.01rem;
+    text-shadow: 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 10px white, 0 0 15px white, 0 0 20px white;
+    padding-top: 0.1vw;
+}
+
+
+header .logo p {
+    font-family: 'EB Garamond', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+header .right-side {
+    /* border: 1px solid black; */
+    width: 26%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 1.5vw;
+
+}
+
+.right-side .language {
+    /* border: 1px solid black; */
+    font-size: 1.25rem;
+    color: #ffffff;
+    width: 28%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: none; */
+}
+
+
+.right-side .register {
+    cursor: pointer;
+    background-image: linear-gradient(rgba(74, 130, 165), rgba(84, 180, 236));
+    width: 48%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    letter-spacing: 0.2rem;
+    font-size: 1.5rem;
+    /* display: none; */
+}
+
+.nav-button {
+    /* border: 1px solid black; */
+    width: 2.5vw;
+    height: 2.25vw;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    cursor: pointer;
+    z-index: 1001;
+    row-gap: 0.75vw;
+    right: 2.65vw;
+    top: 4vw;
+    color: white;
+}
+
+#line1 {
+    border: 0.15vw solid;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+#line2 {
+    border: 0.15vw solid;
+    max-width: 70%;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+
+nav {
+    position: fixed;
+    right: 0px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 20vw;
+    background-color: rgba(5, 44, 72, 0.756);
+    z-index: 999;
+}
+
+#side-nav {
+    max-width: 0px;
+    transition: all 0.3s ease;
+}
+
+cap {
+    font-size: 2rem;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+}
+
+#lineHome {
+    border: 0.05rem solid white;
+    width: 4vw;
+    max-width: 0;
+    transition: all 0.75s ease;
+}
+
+#lineHome.active {
+    max-width: 100%;
+}
+
+nav ul {
+    width: 100%;
+    /* border: 1px solid black; */
+    list-style-type: none;
+    color: white;
+    letter-spacing: 0.15rem;
+    font-size: 1.5rem;
+    font-family: "Cinzel", serif;
+    padding: 4vw 0px 0px 0px;
+}
+
+nav ul li {
+    /* border: 1px solid black; */
+    padding: 1.5vw 0 1.5vw 0;
+    transform: translateX(300px);
+    transition: all 0.5s ease;
+    padding-left: 3vw;
+
+}
+
+#home.active,
+#char.active,
+#dragon.active,
+#isle.active,
+#register.active {
+    padding-left: 1.5vw;
+    transition: all 0.5s ease-out;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner {
+    width: 100%;
+    height: 60vw;
+    display: flex;
+    background-image: url(/Assets/114977690_p0_master1200.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    row-gap: 3%;
+    animation: breath 2.5s ease;
+}
+
+.banner .logo {
+    /* border: 1px solid black; */
+    height: 50%;
+    width: 40%;
+    padding-top: 8%;
+    background-image: url(/Assets/—Pngtree—blue\ ice\ anime\ light\ effect_6738214.png);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: black;
+    font-size: 4.5rem;
+    font-family: "Cinzel", serif;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-shadow: 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 10px white, 0 0 15px white, 0 0 20px white;
+}
+
+.banner .logo p {
+    font-weight: 700;
+    font-size: 2.2rem;
+    font-family: 'EB Garamond', sans-serif;
+    text-shadow: 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 10px white, 0 0 15px white, 0 0 20px white;
+}
+
+.slogan {
+    font-family: 'EB Garamond', sans-serif;
+    /* border: 1px solid black; */
+    text-align: center;
+    padding-top: 3%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
+    font-weight: 500;
+    text-shadow: 0 0 10px var(--clr-blue2), 0 0 20px var(--clr-blue1);
+}
+
+.join {
+    position: sticky;
+    top: 80vh;
+    margin-top: 10%;
+    /* border: 1px solid black; */
+    display: flex;
+    font-family: 'EB Garamond', sans-serif;
+    font-size: 4.5rem;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 500;
+    text-shadow: 0 0 10px var(--clr-blue2), 0 0 20px var(--clr-blue1);
+}
+
+.news {
+    width: 100vw;
+    height: 52.5vw;
+    padding: 5% 2.65% 0 2.65%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 5%;
+}
+
+.news .title {
+    font-family: 'Cinzel', serif;
+    align-self: flex-end;
+    font-size: 5rem;
+    font-weight: 500;
+    color: rgba(84, 180, 236, 0.75)
+}
+
+#title {
+    animation: slideLeft 2s ease;
+    animation-play-state: paused;
+}
+
+.news .news-container {
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10%;
+}
+
+.news-list {
+    width: 80%;
+    height: 70%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.news input[type="button"] {
+    width: 22.5%;
+    height: 12.5%;
+    font-size: 1.75rem;
+    font-family: 'Cinzel', serif;
+    border: none;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    color: rgba(84, 180, 236, 0.75);
+    cursor: pointer;
+}
+
+.news-card {
+    cursor: pointer;
+    width: 23%;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+#news1 {
+    animation: fadeIn 1s ease;
+    animation-play-state: paused;
+}
+
+#news2 {
+    opacity: 0;
+    animation: fadeIn 1s ease 0.5s;
+    animation-play-state: paused;
+}
+#news3 {
+    opacity: 0;
+    animation: fadeIn 1s ease 1s;
+    animation-play-state: paused;
+}
+#news4 {
+    opacity: 0;
+    animation: fadeIn 1s ease 1.5s;
+    animation-play-state: paused;
+}
+
+#more{
+    opacity: 0;
+    animation: fadeIn 1s ease 2s;
+    animation-play-state: paused;
+}
+
+.news-card .img {
+    width: 100%;
+    height: 45%;
+    background-image: url(/Assets/108116044_p0_master1200.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#festival {
+    background-image: url(/Assets/newsFestival.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+#healing {
+    background-image: url(/Assets/newsHealing.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+#endangered {
+    background-image: url(/Assets/newsEndangered.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+.news-card .title {
+    width: 100%;
+    height: 55%;
+    padding: 7.5%;
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 1.25rem;
+    font-family: 'EB Garamond', sans-serif;
+}
+
+footer {
+    font-size: 1rem;
+    margin-top: auto;
+    width: 100vw;
+    height: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.85);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url(/Assets/114034399_p0_master1200.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 3% 0 3% 0;
+    row-gap: 5%;
+}
+
+.sns {
+    /* border: 1px solid black; */
+    width: 25%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1%;
+}
+
+.break {
+    /* border: 1px  solid black; */
+    width: 50%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--clr-blue1);
+}
+
+.break p {
+    padding: 0 2% 0 2%;
+}
+
+.break .line {
+    border: 0.05rem solid var(--clr-blue1);
+    width: 30%;
+}
+
+footer .option {
+    display: flex;
+    /* border: 1px solid black; */
+    width: 40%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.about,
+.privacy,
+.choice {
+    border-right: 0.05rem solid rgba(0, 0, 0, 0.3);
+    padding-right: 5%;
+}
+
+footer .logo {
+    width: 25%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 1.75rem;
+    letter-spacing: 0.01rem;
+}
+
+footer .copyright {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.copyright p {
+    font-size: 1rem;
+}
+
+@media (max-width: 820px) {
+    body {
+        min-height: 100vh;
+    }
+}
+
+@media (max-width: 420px) {
+    html {
+        font-size: 1.75vw;
+    }
+
+    #reg {
+        display: none;
+    }
+
+    header {
+        /* border: 1px solid black; */
+        height: 7.5vh;
+    }
+
+    header .logo {
+        /* border: 1px solid black; */
+        width: 30%;
+        height: 30vw;
+        font-size: 2rem;
+    }
+
+    header .logo p {
+        font-size: 1rem;
+    }
+
+    #side-nav {
+        width: 66vw;
+    }
+
+    cap {
+        font-size: 4.5rem;
+    }
+
+    #lineHome {
+        width: 16vw;
+    }
+
+    nav ul {
+        /* border: 1px solid black; */
+        font-size: 3rem;
+    }
+
+    nav ul li {
+        padding: 4vw 0 4vw 12vw;
+    }
+
+    .nav-button {
+        /* border: 1px solid black; */
+        top: 5vw;
+        height: 7vw;
+        width: 7vw;
+        justify-content: space-evenly;
+    }
+
+    .language p {
+        font-size: 2rem;
+    }
+
+    .banner {
+        height: 70vh;
+    }
+
+    .banner .logo {
+        margin-top: 10%;
+        width: 80%;
+        height: 25%;
+        background-size: 85%;
+        /* border: 1px solid black; */
+    }
+
+    .join {
+        margin-bottom: 15%;
+    }
+
+    .news {
+        /* border: 1px solid black; */
+        padding-top: 5vh;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .news .news-container {
+        width: 100%;
+        height: 100%;
+        /* border: 1px solid black; */
+        row-gap: 5%;
+    }
+
+    .news-list {
+        width: 100%;
+        height: 80%;
+        /* border: 1px solid black; */
+        flex-wrap: wrap;
+        column-gap: 2%;
+        row-gap: 2%;
+    }
+
+    .news-card {
+        width: 49%;
+        height: 49%;
+    }
+
+    .news .title {
+        font-size: 7.5rem;
+    }
+
+    .news-card .title {
+        font-size: 2rem;
+    }
+
+    .news input[type="button"] {
+        width: 50%;
+        height: 6.5%;
+        font-size: 2.5rem;
+    }
+
+    footer {
+        padding-top: 7.5%;
+        font-size: 1.75rem;
+        height: 55vh;
+        row-gap: 7.5%;
+    }
+
+    .break {
+        width: 80%;
+        font-size: 2.25rem;
+        padding-bottom: 5%;
+    }
+
+    .sns {
+        /* border: 1px solid black; */
+        width: 60%;
+        height: 10%;
+        font-size: 2.25rem;
+        margin-top: -5%;
+    }
+
+    footer .option {
+        font-weight: 500;
+        row-gap: 10%;
+        height: 10%;
+        width: 75%;
+        display: flex;
+        justify-content: center;
+        /* border: 1px solid black; */
+        flex-wrap: wrap;
+    }
+
+    .privacy,
+    .support {
+        border-right: none;
+        padding-left: 10%;
+    }
+
+    .about,
+    .choice {
+        padding-right: 10%;
+    }
+
+    footer .logo {
+        width: 30%;
+        height: 10%;
+        font-size: 2.5rem;
+    }
+
+    footer .copyright {
+        /* border: 1px solid black; */
+        width: 80%;
+    }
+
+    footer .copyright p {
+        font-size: 1.5rem;
+    }
+}
